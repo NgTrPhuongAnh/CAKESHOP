@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #222;
+  margin: 0;
+  transition: background 0.4s, color 0.4s;
+}
+
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+header {
+  padding: 0.5rem 1.5rem;
+  background-color: #fcdede;
+  color: #b22222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav_logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b22222;     
+  text-decoration: none; 
+}
+
+.nav_logo img {
+  width: 30px;
+}
+
+.nav_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.change-theme, .nav_user {
+  font-size: 1.5rem;
+  color: #b22222;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+body.dark .change-theme,
+body.dark .nav_user,
+body.dark .nav_logo {
+  color: #ffb3b3;
+}
+
+#login-btn {
+  background: #f99;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+#login-btn:hover {
+  background: #f66;
+}
+
+body.dark header {
+  background-color: #2a2a2a;
+  color: #ffb3b3;
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 60px);
+  width: 100%;
+}
+
+aside {
+  width: 240px;
+  background: #fff0f0;
+  padding: 1rem;
+  border-right: 2px solid #f7caca;
+  overflow-y: auto;
+  transition: background 0.4s, border-color 0.4s;
+}
+
+body.dark aside {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+aside h3 {
+  margin-top: 0;
+  color: #b22222;
+  font-family: 'Lora', serif;
+}
+
+body.dark aside h3 {
+  color: #ffb3b3;
+}
+
+#user-list, #room-list {
+  list-style: none;
+  padding: 0;
+}
+
+#user-list li, #room-list li {
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+  border-bottom: 1px solid #ffdede;
+  transition: background 0.2s ease;
+  font-size: 0.95rem;
+}
+
+#user-list li:hover, #room-list li:hover {
+  background-color: #ffeaea;
+}
+
+body.dark #user-list li,
+body.dark #room-list li {
+  border-bottom: 1px solid #333;
+}
+
+body.dark #user-list li:hover,
+body.dark #room-list li:hover {
+  background-color: #2e2e2e;
+}
+
+#chat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  transition: background 0.4s;
+}
+
+body.dark #chat-section {
+  background: #181818;
+}
+
+#chat-header {
+  padding: 1rem;
+  background: #ffe4e4;
+  font-weight: bold;
+  color: #b22222;
+  transition: background 0.4s, color 0.4s;
+}
+
+body.dark #chat-header {
+  background: #292929;
+  color: #ffb3b3;
+}
+
+#messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff8f8;
+  transition: background 0.4s;
+}
+
+body.dark #messages {
+  background: #202020;
+}
+
+.msg {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  max-width: 75%;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.msg-left {
+  background-color: #c47a95;
+  align-self: flex-start;
+}
+
+.msg-right {
+  background-color: #fcdede;
+  align-self: flex-end;
+}
+
+body.dark .msg-left {
+  background-color: #767070;
+}
+
+body.dark .msg-right {
+  background-color: #3a3a3a;
+}
+
+#input-area {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #fff0f0;
+  gap: 0.4rem;
+  transition: background 0.4s;
+}
+
+body.dark #input-area {
+  background: #292929;
+}
+
+#message-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 2rem;
+  font-size: 1rem;
+  background: #fff;
+  transition: background 0.4s, color 0.4s, border-color 0.4s;
+}
+
+body.dark #message-input {
+  background: #1e1e1e;
+  color: #eee;
+  border-color: #444;
+}
+
+.file-label {
+  cursor: pointer;
+  font-size: 1.2rem;
+  background: #ffb3b3;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark .file-label {
+  background: #555;
+  color: #eee;
+}
+
+#send-btn {
+  background: #ff8080;
+  color: white;
+  border: none;
+  padding: 0.65rem 1.1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+#send-btn:hover {
+  background: #ff6b6b;
+}
+
+#typing-indicator {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 0.25rem;
+}
+
+body.dark #typing-indicator {
+  color: #ccc;
+}
+
+/* Modal styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; 
+  padding: 1.5rem;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+body.dark .modal-content {
+  background-color: #2a2a2a;
+  color: #eee;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+}
